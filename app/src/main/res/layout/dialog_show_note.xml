@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewTodo "
+        android:id="@+id/textViewTodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,7 +31,7 @@
         android:layout_marginStart="16dp"
         android:text="@string/idea_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTodo " />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTodo" />
 
     <TextView
         android:id="@+id/txtTitle"
