@@ -22,7 +22,7 @@ public class DialogShowNote extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder =  new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        final LayoutInflater inflater = getActivity().getLayoutInflater();
 
         View dialogView = inflater.inflate(R.layout.dialog_show_note, null);
 
@@ -46,12 +46,12 @@ public class DialogShowNote extends DialogFragment {
             textViewTodo.setVisibility(View.GONE);
         }
 
-        btnOk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
+//        btnOk.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dismiss();
+//            }
+//        });
         return builder.create();
     }
 
