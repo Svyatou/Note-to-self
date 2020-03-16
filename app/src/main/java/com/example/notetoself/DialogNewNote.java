@@ -61,7 +61,6 @@ public class DialogNewNote extends DialogFragment {
 
                 MainActivity callingActivity = (MainActivity) getActivity();
                 callingActivity.createNewNote(newNote);
-
                 dismiss();
             }
         });

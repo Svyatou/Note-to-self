@@ -46,12 +46,13 @@ public class DialogShowNote extends DialogFragment {
             textViewTodo.setVisibility(View.GONE);
         }
 
-//        btnOk.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dismiss();
-//            }
-//        });
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+        builder.setView(dialogView);
         return builder.create();
     }
 
