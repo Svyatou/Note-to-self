@@ -30,7 +30,7 @@ public class DialogNewNote extends DialogFragment {
         final Button btnOk = (Button)dialogView.findViewById(R.id.btnOk);
         final CheckBox checkBoxImportant = (CheckBox)dialogView.findViewById(R.id.checkBoxImportant);
 
-        builder.setView(dialogView).setMessage("Add a new note");
+        builder.setView(dialogView).setMessage(getResources().getString(R.string.add_a_new_note));
         btnCanel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

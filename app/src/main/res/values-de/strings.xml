@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wolodka-Notizen</string>
+    <string name="action_settings">Einstellung</string>
+    <string name="action_add">Hinzufügen</string>
+    <string name="title_hint">Titelleiste</string>
+    <string name="description_hint">Beschreibung</string>
+    <string name="idea_text">Idee</string>
+    <string name="important_text">Wichtig</string>
+    <string name="todo_text">Tun</string>
+    <string name="cancel_button">Stornieren</string>
+    <string name="ok_button">Okay</string>
+    <string name="settings_title">Titelleiste</string>
+    <string name="theme_title">Thema</string>
+    <string name="theme_light">Licht</string>
+    <string name="theme_dark">Dunkle</string>
+
+    <string name="add_a_new_note">Notiz erstellen</string>
+</resources>

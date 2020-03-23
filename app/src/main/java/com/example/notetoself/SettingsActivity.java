@@ -50,9 +50,6 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void OnClick(View view){
-
-        Intent i;
-        i = new Intent(this, MainActivity.class);
-        startActivity(i);
+        setContentView(R.layout.activity_main);
     }
 }

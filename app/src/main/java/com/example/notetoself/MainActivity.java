@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,8 +29,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-//    Note tempNote = new Note();
-     ArrayList<Note> listNote = new ArrayList<>();
+    private JSONSerializer serializer;
+    private ArrayList<Note> listNote;
+
+
+    //    Note tempNote = new Note();
+//    ArrayList<Note> listNote = new ArrayList<>();
 
     RecyclerView recyclerView;
     NoteAdapter adapter;
@@ -54,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        serializer = new JSONSerializer("NoteToSelf.json", getApplicationContext());
+
+        try {
+            listNote = serializer.load();
+        } catch (Exception e) {
+            listNote = new ArrayList<>();
+            Log.e("Error loading notes: ", "", e);
+        }
 
 
 //        Button button = (Button)findViewById(R.id.btnOk);
@@ -134,4 +148,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void saveNotes(){
+        try{
+            serializer.save(listNote);
+        } catch (Exception e){
+            Log.e("Error saving Notes: ", "", e);
+        }
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        saveNotes();
+    }
 }
